@@ -79,10 +79,6 @@ class MentorsController < ApplicationController
     super
   end
 
-  def resend_password
-    SelfRegistrationsMailer.reset_and_send_password(@mentor).deliver_now
-  end
-
   private
 
   def mentor_params
